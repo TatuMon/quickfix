@@ -103,7 +103,6 @@ func (sm *stateMachine) Incoming(session *session, m fixIn) {
 }
 
 func (sm *stateMachine) fixMsgIn(session *session, m *Message) {
-	fmt.Println("** Corriendo stateMachine.fixMsgIn **")
 	if m.IsMsgTypeOf("A") {
 		fmt.Println("** Removiendo tag 141 desde stateMachine.fixMsgIn **")
 		m.Header.Remove(141)
