@@ -466,7 +466,7 @@ func (s *session) handleLogon(msg *Message) error {
 		if resetSeqNumFlag {
 			if !s.sentReset {
 				s.log.OnEvent("Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1")
-				resetStore = true
+				resetStore = false
 			}
 		}
 	}
